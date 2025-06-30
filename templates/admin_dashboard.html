@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1>Admin Dashboard</h1>
+<p><a href="{{ url_for('add_page') }}">Add Page</a></p>
+<ul>
+{% for page in pages %}
+  <li>{{ page.title }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
